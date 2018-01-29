@@ -1,2 +1,5 @@
 # Dependency directories
 node_modules
+
+# err log
+npm-debug.log

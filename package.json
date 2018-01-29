@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
+    "prestart": "node build/startMsg.js",
     "start": "node build/server.js"
   },
   "author": "Cory House",
