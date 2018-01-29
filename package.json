@@ -4,7 +4,9 @@
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
     "prestart": "node build/startMsg.js",
-    "start": "node build/server.js"
+    "start": "npm-run-all sec webServe",
+    "webServe": "node build/server.js",
+    "sec": "nsp check"
   },
   "author": "Cory House",
   "license": "MIT",
