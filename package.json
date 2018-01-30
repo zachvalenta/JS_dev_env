@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
-    "prestart": "node build/startMsg.js",
+    "prestart": "babel-node build/startMsg.js",
     "start": "npm-run-all sec webServe",
     "webServe": "node build/server.js",
     "sec": "nsp check"
