@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "babel-node build/startMsg.js",
     "start": "npm-run-all sec webServe",
-    "webServe": "node build/server.js",
+    "webServe": "babel-node build/server.js",
     "sec": "nsp check"
   },
   "author": "Cory House",
