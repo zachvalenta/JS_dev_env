@@ -8,6 +8,7 @@
     "lint": "esw webpack.config.* src build --color",
     "lint:watch": "npm run lint -- --watch",
     "sec": "nsp check",
+    "test": "mocha --reporter progress build/testSetup.js \"src/**/*.test.js\"",
     "webServe": "babel-node build/server.js"
   },
   "author": "Cory House",
