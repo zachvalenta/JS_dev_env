@@ -1,4 +1,7 @@
-# Dependency directories
+# install logs
+npm_setup.txt
+
+# dependency directories
 node_modules
 
 # err log
