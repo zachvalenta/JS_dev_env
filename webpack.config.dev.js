@@ -16,7 +16,7 @@ export default { // exports this god obj
   plugins: [],
   module: {
     loaders: [ // how to handle different file types
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
+      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']}, // ? --> if webpack knows to use Babel, why necessary to add babel-node for NPM start script?
       {test: /\.css$/, loaders: ['style','css']}
     ]
   }
