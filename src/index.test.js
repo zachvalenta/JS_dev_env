@@ -14,7 +14,7 @@ describe('index.html', () => {
     const index = fs.readFileSync('./src/index.html', "utf-8");
     jsdom.env(index, function(err, window) {
       const h1 = window.document.getElementsByTagName('h1')[0];
-      expect(h1.innerHTML).to.equal("zv_dev_starter kit");
+      expect(h1.innerHTML).to.equal("zv_dev_starter ki");
       done();
       // not sure how done() works here but w/out (and w/out passing as arg above) test will pass even if it should fail
       // think, w/out done(), Mocha will just keep moving on in exec when it should wait; idk, rewatch 'DOM testing'
