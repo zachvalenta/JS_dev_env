@@ -4,11 +4,12 @@
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
     "prestart": "babel-node build/startMsg.js",
-    "start": "npm-run-all --parallel sec webServe lint:watch",
+    "start": "npm-run-all --parallel sec webServe lint:watch test:watch",
     "lint": "esw webpack.config.* src build --color",
     "lint:watch": "npm run lint -- --watch",
     "sec": "nsp check",
     "test": "mocha --reporter progress build/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch",
     "webServe": "babel-node build/server.js"
   },
   "author": "Cory House",
