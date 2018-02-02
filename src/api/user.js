@@ -1,5 +1,8 @@
 // this is polyfill version
 import 'whatwg-fetch';
+import getBaseUrl from './baseUrl.js';
+
+const baseUrl = getBaseUrl();
 
 // only func exported from module
 export function getUsers() {
@@ -9,7 +12,7 @@ export function getUsers() {
 /* where are the args coming from for onSuccess() ? */
 
 function get(url) {
-  return fetch(url).then(onSuccess, onError);
+  return fetch(baseUrl + url).then(onSuccess, onError);
 }
 
 function onSuccess(response) {
