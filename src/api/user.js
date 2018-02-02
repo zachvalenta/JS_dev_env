@@ -6,7 +6,7 @@ export function getUsers() {
   return get('users');
 }
 
-/* where are the args coming from for these params in get() et. al ? */
+/* where are the args coming from for onSuccess() ? */
 
 function get(url) {
   return fetch(url).then(onSuccess, onError);
