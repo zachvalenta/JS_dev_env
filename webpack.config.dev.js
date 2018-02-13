@@ -1,4 +1,5 @@
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default { // exports this god obj
   debug: true, // debug info on run
@@ -13,7 +14,12 @@ export default { // exports this god obj
     publicPath: '/',
     filename: 'bundle.js' // filename of output that we *don't* generate; ??
   },
-  plugins: [],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      inject: true, // says "Webpack, take whatever JS you generate and put reference"
+    })
+  ],
   module: {
     loaders: [ // how to handle different file types
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']}, // ? --> if webpack knows to use Babel, why necessary to add babel-node for NPM start script?
